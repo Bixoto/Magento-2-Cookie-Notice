@@ -1,5 +1,10 @@
 # Magento 2 Cookie Notice - Changelog
 
+## 1.0.5.2 (2022/11/03)
+
+* Use an absolute URL in `cmsPage`
+* Tweak the CSS
+
 ## 1.0.5.1 (2022/11/03)
 
 * Make all widget strings translatable
