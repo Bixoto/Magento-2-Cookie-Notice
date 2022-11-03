@@ -18,6 +18,7 @@ class Fontfamily implements ArrayInterface
         return [
             ['value' => 'unset', 'label' => __('Auto')],
             ['value' => 'Open Sans', 'label' => __('Open Sans')],
+            ['value' => 'Poppins', 'label' => __('Poppins')],
             ['value' => 'Lato', 'label' => __('Lato')],
             ['value' => 'Old Standard TT', 'label' => __('Old Standard TT')],
             ['value' => 'Abril Fatface', 'label' => __('Abril Fatface')],
