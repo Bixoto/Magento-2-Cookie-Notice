@@ -34,7 +34,6 @@
     padding: 4px 10px;
     text-decoration: none;
     border-radius: 2px;
-    font-size: 14px;
 }
 
 #m-cookienotice .m-button.m-accept:before {
@@ -63,12 +62,12 @@
 }
 
 .cookie-div {
-    width: 100%;
+    width: 50%;
     margin: auto;
 }
-/* customizacao tamanho cookie bar */
+
 #m-cookienotice.v-bar {
-    width: 100%;
+    width: calc(50% - 10px);
     padding: 5px 0;
 }
 
@@ -76,9 +75,6 @@
     vertical-align: middle;
     padding-right: 10px;
     text-align: center;
-    float: left;
-    margin-left: 40%;
-    margin-bottom: 10px;
 }
 
 #m-cookienotice.v-bar.v-top {
@@ -146,12 +142,6 @@
     #action-custom-css {
         float: right;
         margin-top: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    #m-cookienotice.v-bar .m-actions {
-        margin-left: 20%;
     }
 }
 
