@@ -13,3 +13,7 @@ The present repository contains the latest code from upstream as well as some ad
 [Meetanshi]: https://meetanshi.com/magento-2-cookie-notice.html
 [repository]: https://github.com/MeetanshiInc/Magento-2-Cookie-Notice
 
+## Install
+
+    composer require bixoto/magento2-cookie-notice
+
