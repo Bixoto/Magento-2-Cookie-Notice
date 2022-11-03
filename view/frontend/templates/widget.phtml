@@ -30,7 +30,7 @@ endif;
             <span class="titlecookie"
                   style="border-bottom: 2px solid <?php echo $block->acceptButtonBackgroundColor() ?>;">
             <?php if ( $block->getShow() == 'default' ) :
-                echo 'Cookies and Privacy';
+                echo __('Cookies and Privacy');
             else :
                 echo $block->modelTitle();
             endif;
@@ -40,7 +40,7 @@ endif;
         <div id="message-custom-css" class="m-message custom-css"
              style="width:<?php echo $width ?>;font-size:<?php echo $block->modelMessageSize(); ?>px;font-family:<?php echo $fontFamily; ?>">
             <?php if ( $block->getShow() == 'default' ) :
-                echo 'This website use cookies to ensure you get the best user experience on our website.';
+                echo __('This website use cookies to ensure you get the best user experience on our website.');
             else :
                 echo $block->getCustomMessage();
             endif;
@@ -50,7 +50,7 @@ endif;
             <a href="javascript:cookieNoticeAccept();" class="m-button m-accept"
                style="background-color:<?php echo $block->acceptButtonBackgroundColor() ?>;color:<?php echo $block->acceptButtonColor() ?>">
                 <?php if ( $block->getShow() == 'default' ) :
-                    echo "Accept";
+                    echo __("Accept");
                 else :
                     echo $block->getCustomAccept();
                 endif;
@@ -59,7 +59,7 @@ endif;
             <a href="javascript:cookieClose();" class="m-button m-decline"
                style="background-color:<?php echo $block->closeButtonBackgroundColor() ?>;color:<?php echo $block->closeButtonColor() ?>">
                 <?php if ( $block->getShow() == 'default' ) :
-                    echo "Decline";
+                    echo __("Decline");
                 else :
                     echo $block->getCustomDecline();
                 endif;
@@ -68,7 +68,7 @@ endif;
             <a href="<?php echo $block->getUrls().$block->cmsPage(); ?>" target="<?php echo $block->newTab(); ?>" class="m-button"
                style="background-color:<?php echo $block->policyBackgroundColor() ?>;color:<?php echo $block->privacyPolicyColor() ?>">
                 <?php if ( $block->getShow() == 'default' ) :
-                    echo "Read our Privacy Policy";
+                    echo __("Read our Privacy Policy");
                 else :
                     echo $block->getCustomMoreInfo();
                 endif;
