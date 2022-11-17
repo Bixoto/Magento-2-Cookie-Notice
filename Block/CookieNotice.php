@@ -161,12 +161,19 @@ class CookieNotice extends Template implements BlockInterface
      */
     public function cmsPage()
     {
+        $cmsPage = $this->moduleHelper->cmsPage();
+        if (strpos($cmsPage, "http://") === 0
+            || strpos($cmsPage, "https://") === 0
+            || strpos($cmsPage, "/") === 0) {
+            return $cmsPage;
+        }
+
         try {
-            return $this->_storeManager->getStore()->getBaseUrl() . '' . $this->moduleHelper->cmsPage();
+            return $this->_storeManager->getStore()->getBaseUrl() . '' . $cmsPage;
         } catch (\Exception $e) {
             $this->moduleHelper->logMessage($e->getMessage());
         }
-        return $this->_storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_LINK) . '' . $this->moduleHelper->cmsPage();
+        return $this->_storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_LINK) . '' . $cmsPage;
     }
 
     /**

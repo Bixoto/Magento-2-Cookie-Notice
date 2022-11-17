@@ -1,5 +1,9 @@
 # Magento 2 Cookie Notice - Changelog
 
+## Unreleased
+
+* Support both absolute and relative URLs in the config
+
 ## 1.0.5.2 (2022/11/03)
 
 * Use an absolute URL in `cmsPage`
