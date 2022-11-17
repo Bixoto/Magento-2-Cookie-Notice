@@ -65,7 +65,7 @@ endif;
                 endif;
                 ?>
             </a>
-            <a href="<?php echo $block->getUrls().$block->cmsPage(); ?>" target="<?php echo $block->newTab(); ?>" class="m-button"
+            <a href="<?php echo $block->cmsPage(); ?>" target="<?php echo $block->newTab(); ?>" class="m-button"
                style="background-color:<?php echo $block->policyBackgroundColor() ?>;color:<?php echo $block->privacyPolicyColor() ?>">
                 <?php if ( $block->getShow() == 'default' ) :
                     echo __("Read our Privacy Policy");

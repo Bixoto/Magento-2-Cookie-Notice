@@ -43,15 +43,6 @@ class CookieNotice extends Template implements BlockInterface
     }
 
     /**
-     * @return mixed
-     * @throws \Magento\Framework\Exception\NoSuchEntityException
-     */
-    public function getUrls()
-    {
-        return $this->storeManager->getStore()->getBaseUrl();
-    }
-
-    /**
      * @param array $arr
      * @return $this|void
      */
@@ -169,11 +160,11 @@ class CookieNotice extends Template implements BlockInterface
         }
 
         try {
-            return $this->_storeManager->getStore()->getBaseUrl() . '' . $cmsPage;
+            return $this->storeManager->getStore()->getBaseUrl() . '' . $cmsPage;
         } catch (\Exception $e) {
             $this->moduleHelper->logMessage($e->getMessage());
         }
-        return $this->_storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_LINK) . '' . $cmsPage;
+        return $this->storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_LINK) . '' . $cmsPage;
     }
 
     /**
