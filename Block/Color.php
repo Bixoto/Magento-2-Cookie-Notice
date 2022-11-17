@@ -25,9 +25,10 @@ class Color extends Field
      * @param array $data
      */
     public function __construct(
-        Context $context,
+        Context  $context,
         Registry $coreRegistry,
-        array $data = []){
+        array    $data = [])
+    {
         $this->_coreRegistry = $coreRegistry;
         parent::__construct($context, $data);
     }
@@ -40,7 +41,7 @@ class Color extends Field
     {
         $html = $element->getElementHtml();
         $cpPath = $this->getViewFileUrl('Meetanshi_CookieNotice::js');
-        if ( !$this->_coreRegistry->registry('colorpicker_loaded') ){
+        if (!$this->_coreRegistry->registry('colorpicker_loaded')) {
             $html .= '<script type="text/javascript" src="' . $cpPath . '/' . 'jscolor.js"></script>';
             $this->_coreRegistry->registry('colorpicker_loaded', 1);
         }

@@ -31,11 +31,12 @@ class CookieNotice extends Template implements BlockInterface
      * @param array $data
      */
     public function __construct(
-        Template\Context $context,
-        Data $moduleHelper,
+        Template\Context      $context,
+        Data                  $moduleHelper,
         StoreManagerInterface $storeManager,
-        array $data = []
-    ){
+        array                 $data = []
+    )
+    {
         $this->storeManager = $storeManager;
         parent::__construct($context, $data);
         $this->moduleHelper = $moduleHelper;
@@ -162,7 +163,7 @@ class CookieNotice extends Template implements BlockInterface
     {
         try {
             return $this->_storeManager->getStore()->getBaseUrl() . '' . $this->moduleHelper->cmsPage();
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             $this->moduleHelper->logMessage($e->getMessage());
         }
         return $this->_storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_LINK) . '' . $this->moduleHelper->cmsPage();
@@ -365,7 +366,7 @@ class CookieNotice extends Template implements BlockInterface
      */
     public function toHtml()
     {
-        if ( !$this->moduleHelper->enableDisable() ||
+        if (!$this->moduleHelper->enableDisable() ||
             ($this->getNameInLayout() == 'meetanshi_cookienotice_top'
                 && $this->moduleHelper->getBarPosition() != BarPosition::TOP)
             || ($this->getNameInLayout() == 'meetanshi_cookienotice_bottom'
