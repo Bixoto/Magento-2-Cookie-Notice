@@ -1,6 +1,8 @@
 # Magento 2 Cookie Notice - Changelog
 
-## Unreleased
+We follow the same versioning as upstream with an additional number for our own patches.
+
+## 1.0.5.3 (2022/11/17)
 
 * Support both absolute and relative URLs in the config
 
