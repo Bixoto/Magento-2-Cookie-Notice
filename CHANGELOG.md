@@ -2,7 +2,7 @@
 
 We follow the same versioning as upstream with an additional number for our own patches.
 
-## 1.0.5.3 (2022/11/17)
+## 1.0.5.3, 1.0.5.4 (2022/11/17)
 
 * Support both absolute and relative URLs in the config
 
